@@ -1,7 +1,3 @@
-# Framework
-PRODUCT_BOOT_JARS += \
-    com.sony.device
-
 # Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += \
     vendor/sony/camera/sepolicy/
