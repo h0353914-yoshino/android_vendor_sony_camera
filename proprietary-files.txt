@@ -10,7 +10,6 @@ system/etc/permissions/platform-com.sonyericsson.android.camera.xml
 system/etc/permissions/privapp-permissions-com.sonyericsson.android.camera.xml
 system/etc/permissions/privapp-permissions-com.sonyericsson.android.addoncamera.artfilter.xml
 system/etc/default-permissions/com.sonyericsson.android.camera.xml
-system/etc/init/cacaoserver.rc
 system/etc/sysconfig/somc_internal_whitelist.xml
 system/framework/com.sony.device.jar
 system/framework/com.sonyericsson.idd_impl.jar
@@ -19,7 +18,6 @@ system/framework/com.sonymobile.securedatamanager_impl.jar
 system/framework/com.sonymobile.vibrationeffect_impl.jar
 system/framework/com.sonymobile.camera.addon.api.jar
 system/framework/com.sonymobile.imageprocessor.bypasscamera.api.jar
-system/bin/cacaoserver
 system/vendor/lib/libscveObjectTracker.so
 system/vendor/lib/libscveObjectTracker_stub.so
 system/vendor/lib/libscveFaceRecognition.so

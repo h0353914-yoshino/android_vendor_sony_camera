@@ -1,4 +1,4 @@
-/system/bin/cacaoserver    u:object_r:cacaoserver_exec:s0
+/vendor/bin/cacaoserver    u:object_r:cacaoserver_exec:s0
 
 # 20260902：實機測試 app-scan3d 掃描流程時發現相機預覽全黑，logcat 顯示：
 #   avc: denied { read write } for name="i2c-8" ...

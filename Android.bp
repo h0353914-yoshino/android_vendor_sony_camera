@@ -98,19 +98,6 @@ android_app_import {
     },
 }
 
-cc_prebuilt_binary {
-    name: "cacaoserver",
-    owner: "sony",
-    srcs: ["proprietary/system/bin/cacaoserver"],
-    compile_multilib: "32",
-
-    strip: {
-        none: true,
-    },
-    check_elf_files: false,
-    init_rc: ["proprietary/system/etc/init/cacaoserver.rc"],
-}
-
 cc_prebuilt_library_shared {
     name: "libscveCommon_stub",
     owner: "sony",

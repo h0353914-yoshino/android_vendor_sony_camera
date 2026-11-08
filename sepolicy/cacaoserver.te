@@ -10,9 +10,10 @@
 # non-coredomain domain can't execute system_file_type at all (full_treble
 # neverallow), and coredomain is what lets a system daemon still reach
 # vendor HALs via hal_client_domain below.
-type cacaoserver, domain, coredomain;
-type cacaoserver_exec, exec_type, system_file_type, file_type;
+type cacaoserver, domain;
+type cacaoserver_exec, exec_type, vendor_file_type, file_type;
 type cacaoserver_service, service_manager_type;
+type cacaoserver_tmpfs, file_type;
 
 init_daemon_domain(cacaoserver)
 
@@ -126,7 +127,7 @@ allow cacaoserver hal_graphics_mapper_hwservice:hwservice_manager find;
 
 # 原廠對 permission_service 開了 service_manager find（我們完全沒有）：
 #   (allow cacaoserver permission_service_32_0 (service_manager (find)))
-allow cacaoserver permission_service:service_manager find;
+# （permission_service：vendor 網域不可用，且 cacaoserver 原始碼不使用，已移除）
 
 # 原廠額外給了 same_process_hal_file 執行/讀取權限（我們完全沒有）。這是
 # passthrough/same-process HAL .so 的檔案類型，慢動作模式「無法啟動相機」
@@ -148,3 +149,16 @@ allow cacaoserver mediaserver:binder { call transfer };
 allow mediaserver cacaoserver:binder { call transfer };
 allow cacaoserver mediaserver:fd use;
 allow mediaserver cacaoserver:fd use;
+
+
+# ─── vendor 化（stable AIDL）新增 ───
+# cacaoserver 現在是 /vendor/bin 的 vendor 網域：服務為 AIDL（libbinder_ndk），
+# 共享記憶體走 memfd（與 app 互傳），圖形／編碼走 GPU 與 mediaswcodec。
+tmpfs_domain(cacaoserver)
+hwbinder_use(cacaoserver)
+allow cacaoserver appdomain_tmpfs:file { read write map getattr };
+allow cacaoserver gpu_device:chr_file rw_file_perms;
+binder_call(cacaoserver, mediaswcodec)
+binder_call(mediaswcodec, cacaoserver)
+allow cacaoserver mediaswcodec:fd use;
+allow mediaswcodec cacaoserver:fd use;

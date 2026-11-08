@@ -50,6 +50,7 @@ PRODUCT_PACKAGES += \
     libcacao_pal \
     libcacao_client \
     libcacao_service \
+    vendor.somc.cacao.xml \
     libcacao_process_ctrl_gateway \
     libcammw_util \
     libimageprocessorjni \
@@ -67,3 +68,7 @@ PRODUCT_PACKAGES += \
     libscveObjectSegmentation \
     libubifocus \
     libdualcameraddm
+
+# vendor.somc.cacao 的 framework 相容矩陣宣告
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    vendor/sony/camera/vintf/framework_compatibility_matrix.xml
