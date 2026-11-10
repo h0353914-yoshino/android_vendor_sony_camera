@@ -33,7 +33,7 @@
 # file's header for the full explanation). Reused as-is rather than
 # re-deriving it.
 
-type scan3d_app, domain, coredomain;
+type scan3d_app, domain;
 
 app_domain(scan3d_app)
 net_domain(scan3d_app)

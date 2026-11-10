@@ -22,7 +22,7 @@
 # If SemcCameraUI turns out to need more, add it from a real avc denial,
 # not from re-copying platform_app.te wholesale.
 
-type semccamera_app, domain, coredomain;
+type semccamera_app, domain;
 
 app_domain(semccamera_app)
 net_domain(semccamera_app)

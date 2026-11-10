@@ -13,8 +13,8 @@ PRODUCT_COPY_FILES += \
     vendor/sony/camera/proprietary/system/etc/permissions/com.sonymobile.getmore.api.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.getmore.api.xml \
     vendor/sony/camera/proprietary/system/etc/permissions/com.sonymobile.securedatamanager.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.securedatamanager.xml \
     vendor/sony/camera/proprietary/system/etc/permissions/com.sonymobile.vibrationeffect.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.vibrationeffect.xml \
-    vendor/sony/camera/proprietary/system/etc/permissions/platform-com.sonyericsson.android.camera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/platform-com.sonyericsson.android.camera.xml \
-    vendor/sony/camera/proprietary/system/etc/permissions/privapp-permissions-com.sonyericsson.android.camera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.sonyericsson.android.camera.xml \
+    vendor/sony/camera/proprietary/system/etc/permissions/platform-com.sonyericsson.android.camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/platform-com.sonyericsson.android.camera.xml \
+    vendor/sony/camera/proprietary/system/etc/permissions/privapp-permissions-com.sonyericsson.android.camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-com.sonyericsson.android.camera.xml \
     vendor/sony/camera/proprietary/system/etc/sysconfig/somc_internal_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/somc_internal_whitelist.xml \
     vendor/sony/camera/proprietary/system/etc/permissions/com.sonymobile.camera.addon.api.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.camera.addon.api.xml \
     vendor/sony/camera/proprietary/system/etc/permissions/com.sonymobile.imageprocessor.bypasscamera.api.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.imageprocessor.bypasscamera.api.xml \
