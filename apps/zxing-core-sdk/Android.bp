@@ -1,0 +1,8 @@
+// 與 external/zxing 的 zxing-core 相同原始碼，改以 system API 建置，
+// 供 SemcCameraUI（sdk_version: "system_current"）使用。
+java_library {
+    name: "zxing-core-sdk",
+    owner: "sony",
+    srcs: ["java/**/*.java"],
+    sdk_version: "system_current",
+}
