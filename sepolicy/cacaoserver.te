@@ -162,3 +162,6 @@ binder_call(cacaoserver, mediaswcodec)
 binder_call(mediaswcodec, cacaoserver)
 allow cacaoserver mediaswcodec:fd use;
 allow mediaswcodec cacaoserver:fd use;
+
+# semccamera_app（system_ext，公開宣告）以 memfd 讀寫 cacaoserver 建立的 tmpfs
+allow semccamera_app cacaoserver_tmpfs:file { read write map getattr };
