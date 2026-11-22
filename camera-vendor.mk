@@ -35,6 +35,16 @@ PRODUCT_PACKAGES += \
     SemcCameraUI-xxhdpi-release \
     SomcMovieCreator-release \
     app-scan3d-release \
+    libsomc_alfortrsc \
+    libsomc_bordeauxrsc \
+    libsomc_canelersc \
+    libsomc_marblersc \
+    libsomc_melonpanrsc \
+    libsomc_mugichocorsc \
+    libsomc_raisinrsc \
+    libsomc_spicarsc \
+    libsomc_topporsc \
+    libsomc_yummyrsc \
     com.sony.device \
     com.sonyericsson.idd_impl \
     com.sonymobile.getmore.api \

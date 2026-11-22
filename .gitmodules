@@ -14,3 +14,7 @@
 	path = apps/app-scan3d
 	url = https://github.com/h0353914/app-scan3dpreloaded-release
 	branch = java-3.0.A.0.36-a15
+[submodule "rsc"]
+	path = rsc
+	url = https://github.com/h0353914/Camera_GLSL.git
+	branch = lineage-24.0
